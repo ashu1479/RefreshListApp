@@ -49,6 +49,8 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.MyView
         holder.img_url.setMovementMethod(LinkMovementMethod.getInstance());
         String text = "<a href='"+imageModelArrayList.get(holder.getAdapterPosition()).getUrl()+"'> "+imageModelArrayList.get(position).getUrl() +"</a>";
         holder.img_url.setText("URL : "+ Html.fromHtml(text));
+
+        //on clicklistner to open url in webview
         holder.img_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,6 +60,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.MyView
             }
         });
 
+        //Onclicklistner to open in alertdialog
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
