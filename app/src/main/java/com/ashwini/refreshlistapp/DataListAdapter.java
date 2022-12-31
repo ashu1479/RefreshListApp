@@ -44,7 +44,6 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.MyView
         holder.author.setText("Author : "+imageModelArrayList.get(position).getAuthor());
         holder.width.setText("Width : "+imageModelArrayList.get(position).getWidth());
         holder.height.setText("height : "+imageModelArrayList.get(position).getHeight());
-        //holder.img_url.setText("URL : "+ imageModelArrayList.get(position).getUrl());
         Picasso.get().load(imageModelArrayList.get(position).getDownload_url()).resize(400,400).centerInside().into(holder.download_url);
         holder.img_url.setClickable(true);
         holder.img_url.setMovementMethod(LinkMovementMethod.getInstance());
@@ -67,7 +66,6 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.MyView
 
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(view.getContext());
                 alertDialog.setTitle("Picsum Image Details");
-                alertDialog.setMessage("Put your description text here!");
                 LinearLayout diagLayout = new LinearLayout(view.getContext());
                 diagLayout.setOrientation(LinearLayout.VERTICAL);
                 diagLayout.setBackground(inflater.getContext().getDrawable(R.drawable.rounded_corner));
