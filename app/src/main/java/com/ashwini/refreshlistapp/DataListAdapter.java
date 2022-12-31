@@ -53,7 +53,7 @@ public class DataListAdapter extends RecyclerView.Adapter<DataListAdapter.MyView
         holder.img_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(inflater.getContext(), UrlWebView.class);
+                Intent i = new Intent(inflater.getContext(), UrlWebviewActivity.class);
                 i.putExtra("img_url",imageModelArrayList.get(holder.getAdapterPosition()).getUrl().toString());
                 inflater.getContext().startActivity(i);
             }
